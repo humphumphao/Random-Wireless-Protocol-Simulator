@@ -1,0 +1,134 @@
+<html>
+<head>
+
+<title>Wireless Network Protocol Simulator</title>
+
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<link rel="stylesheet" href="http://flip.hr/css/bootstrap.min.css">
+<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<script src="http://code.jquery.com/ui/1.10.1/jquery-ui.js"></script>
+<script type='text/javascript' src='http://code.jquery.com/jquery-1.6.2.js'></script>
+
+
+<script src="js/canvas.js"></script>
+<script src="js/showRandom.js"></script>
+<script src="js/showRandom2.js"></script>
+<script src="js/showDsrRandom.js"></script>
+
+</head>
+
+<script>
+
+var randomCountArray = new Array();
+var components;
+
+function clear(){
+context.clearRect(0, 0, 800, 550);
+}
+
+
+</script>
+
+<body>
+<table border = '1' width = "1350" style="padding-top:8px; padding-left:5px;" class="table table-striped">
+<tr>
+<th valign= "middle" colspan= "3">Random Generation Wireless Network Protocol Simulator</th>
+</tr>
+<tr>
+<td>
+<canvas align= "middle" id= "myCanvas" width= "800px" height= "550px" style="border:0px solid #000000;"> </canvas>
+</td>
+
+<td border= '1' id="routingTable" valign= 'top' align= 'middle' >
+<table border= '1' valign= 'middle' >
+<tr colspan= "3" valign= 'middle'>Routing Table - S1</tr>
+<td>Destn</td><td>Next Node</td><td>Dist</td>
+<tr id="routingTable1" align= 'middle'></tr>
+<tr id="routingTable2" align= 'middle'></tr>
+<tr id="routingTable3" align= 'middle'></tr>
+<tr id="routingTable4" align= 'middle'></tr>
+<tr id="routingTable5" align= 'middle'></tr>
+<tr id="routingTable6" align= 'middle'></tr>
+<tr id="routingTable7" align= 'middle'></tr>
+<tr id="routingTable8" align= 'middle'></tr>
+<tr id="routingTable9" align= 'middle'></tr>
+<tr id="routingTable10" align= 'middle'></tr>
+<tr id="routingTable11" align= 'middle'></tr>
+<tr id="routingTable12" align= 'middle'></tr>
+<tr id="routingTable13" align= 'middle'></tr>
+<tr id="routingTable14" align= 'middle'></tr>
+<tr id="routingTable15" align= 'middle'></tr>
+<tr id="routingTable16" align= 'middle'></tr>
+<tr id="routingTable17" align= 'middle'></tr>
+</table>
+
+</td>
+
+<td  width = "350" align= 'middle' valign= 'top'>
+
+<table border = '0' align= 'middle'>
+<th>
+<form>
+Select your Network Protocol:
+<select id="protocolIdentity" onchange="showRandom()">
+<option>Select One</option>
+<option value="dsdv">Destination Sequenced Distance Vector</option>
+<option value="dsr">Dynamic Source Routing</option>  
+</select>
+</form></th>
+<tr>
+<td align="middle"><input type="button" class="btn btn-info btn-small" id="GT" value="Generate Topology" onclick="generateRandom()" disabled> <input type="button" class="btn btn-info btn-small" id="SR2" value="Show Routing" onclick="randomRoutingAnimation()" disabled></td>
+</tr>
+<td  align="middle" colspan ='4'><canvas id="nodeCanvas" width="160" height="25" style="border:0px solid #000000;"></canvas><td>
+</table>
+
+<table border ="0" width ="350">
+<tr align='middle'><td colspan ='3'>
+<textarea width ="350" id="message" name="message" rows="6" cols="50"></textarea>
+</td></tr>
+</table>
+</br></br>
+Instructions for using Wireless Network Protocol Simulator </br></br>
+Step 1: Select the protocol</br>
+Step 2: Press "Generate Topology"</br>
+Step 3: press "Show Routing" to see animation</br>
+Step 4: Repeat Step 2 & Step 3 to see more topology</br></br>
+
+Enjoy using it.</br></br>
+<a href="file:///C:/Users/Hao/Desktop/Wireless%20Protocol%20Simulator%20V4/interface.html">Create-Your-Own Wireless Network Simulator</a></br>
+<a href="file:///C:/Users/Hao/Desktop/Wireless%20Protocol%20Simulator/interface.html">Situational Wireless Network Protocol Simulator</a>
+
+</table>
+
+<script>//show a mouse's coordinates in the nodeCanvas
+	
+		  
+		  var canvas = document.getElementById('myCanvas');
+		  var context = canvas.getContext('2d');
+
+		  canvas.addEventListener('mousemove', function(evt) {
+			var mousePos = getMousePos(canvas, evt);
+			var message = 'Mouse position: ' + mousePos.x + ',' + mousePos.y;
+			writeMessage(document.getElementById('nodeCanvas'), message);
+		  }, false);
+		  
+	function writeMessage(canvas, message) {
+        var context = canvas.getContext('2d');
+        context.clearRect(0, 0, 300, 25);
+        context.font = '12pt Calibri';
+        context.fillStyle = 'red';
+        context.fillText(message, 0, 20);
+      }
+		        function getMousePos(canvas, evt) {
+        var rect = canvas.getBoundingClientRect();
+        return {
+          x: evt.clientX - rect.left,
+          y: evt.clientY - rect.top
+        };
+      }
+	 </script>
+
+	 
+</body>
+</html>
