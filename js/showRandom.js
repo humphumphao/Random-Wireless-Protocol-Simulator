@@ -78,6 +78,71 @@ function generateRandom(){
 			randomTop15();
 		}
 	}
+	else if(protocolIdentity=="aodv"){
+		if(count>1 && count<10){
+			randomTop21();
+		}
+		else if(count>11 && count<20){
+			randomTop22();
+		}
+		else if(count>21 && count<30){
+			randomTop23();
+		}
+		else if(count>31 && count<40){
+			randomTop24();
+		}
+		else if(count>41 && count<50){
+			randomTop25();
+		}
+		else if(count>51 && count<60){
+			randomTop26();
+		}
+		else if(count>61 && count<70){
+			randomTop27();
+		}
+		else if(count>71 && count<80){
+			randomTop28();
+		}
+		else if(count>81 && count<90){
+			randomTop29();
+		}
+		else{
+			randomTop25();
+		}
+	}
+	
+	else if(protocolIdentity=="olsr"){
+		if(count>1 && count<10){
+			randomTop31();
+		}
+		else if(count>11 && count<20){
+			randomTop36();
+		}
+		else if(count>21 && count<30){
+			randomTop33();
+		}
+		else if(count>31 && count<40){
+			randomTop34();
+		}
+		else if(count>41 && count<50){
+			randomTop35();
+		}
+		else if(count>51 && count<60){
+			randomTop36();
+		}
+		else if(count>61 && count<70){
+			randomTop37();
+		}
+		else if(count>71 && count<80){
+			randomTop34();
+		}
+		else if(count>81 && count<90){
+			randomTop39();
+		}
+		else{
+			randomTop35();
+		}
+	}
 		
 }
 
@@ -1945,10 +2010,6 @@ function randomRoutingAnimation(){
 		}
 		else if(count>31 && count<40){
 			TopForteenRoutingA(668,495);
-			setTimeout('TopForteenRoutingB(340,464)',4200);
-			setTimeout('TopForteenRoutingC(218,395)',5900);
-			setTimeout('TopForteenRoutingD(265,265)',8000);
-			setTimeout('TopForteenRoutingE(380,120)',10000);
 		}
 		else if(count>41 && count<50){
 			TopFifteenRoutingA(167,242);
@@ -1971,6 +2032,97 @@ function randomRoutingAnimation(){
 			TopFifteenRoutingA(167,242);
 			setTimeout('TopFifteenRoutingB(222,374)',1700);
 			setTimeout('TopFifteenRoutingC(633,374)',7000);
+		}
+	}
+	else if(protocolIdentity=="aodv"){
+		if(count>1 && count<10){
+			Top21RoutingA(287,185);
+
+		}
+		else if(count>11 && count<20){
+			Top22RoutingA(592,315);
+
+		}
+		else if(count>21 && count<30){
+			Top23RoutingA(74,440);
+
+		}
+		else if(count>31 && count<40){
+			Top24RoutingA(668,495);
+
+		}
+		else if(count>41 && count<50){
+			Top25RoutingA(167,242);
+
+		}
+		else if(count>51 && count<60){
+			Top26RoutingA(431,149);		
+		}
+		else if(count>61 && count<70){
+			Top27RoutingA(653,356)
+		}
+		else if(count>71 && count<80){
+			Top28RoutingA(238,175);
+		}
+		else if(count>81 && count<90){
+			Top29RoutingA(256,149);
+		}
+		else{
+			Top25RoutingA(167,242);
+
+		}
+	}	
+	else if(protocolIdentity=="olsr"){
+		if(count>1 && count<10){
+			Top31RoutingA(287,185);
+			Top31RoutingA2(287,185);
+
+		}
+		else if(count>11 && count<20){
+			Top36RoutingA3(431,149);
+			Top36RoutingA(431,149);
+			Top36RoutingA2(431,149);	
+
+		}
+		else if(count>21 && count<30){
+			Top33RoutingA(384,284);
+			Top33RoutingA2(384,284);
+
+		}
+		else if(count>31 && count<40){
+			Top34RoutingA(611,202);
+			Top34RoutingA2(611,202);
+			Top34RoutingA3(611,202);
+
+		}
+		else if(count>41 && count<50){
+			Top35RoutingA(222,374);
+			Top35RoutingA2(222,374);
+
+		}
+		else if(count>51 && count<60){
+			Top36RoutingA3(431,149);
+			Top36RoutingA(431,149);
+			Top36RoutingA2(431,149);			
+		}
+		else if(count>61 && count<70){
+			Top37RoutingA(389,289);
+			Top37RoutingA2(389,289);
+		}
+		else if(count>71 && count<80){
+			Top34RoutingA(611,202);
+			Top34RoutingA2(611,202);
+			Top34RoutingA3(611,202);
+
+		}
+		else if(count>81 && count<90){
+			Top39RoutingA(256,290);
+			Top39RoutingA2(256,290);
+			Top39RoutingA3(256,290);
+		}
+		else{
+			Top35RoutingA(167,242);
+
 		}
 	}
 }
