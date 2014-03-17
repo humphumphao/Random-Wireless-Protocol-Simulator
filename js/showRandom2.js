@@ -269,7 +269,7 @@ document.getElementById('routingTable').innerHTML =
 		
 	"<tr align = 'middle'>" +
 	
-	"<td>5</td>" +
+	"<td>6</td>" +
 
     "<td>1</td>" +
 
